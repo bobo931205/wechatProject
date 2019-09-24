@@ -1,0 +1,16 @@
+/* pages/user_center/user_center.wxss */
+.user_center{
+  padding: 0 16px;
+}
+.user_center .item{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.navigator-hover {
+  color:blue;
+}
+.other-navigator-hover {
+  color:red;
+}

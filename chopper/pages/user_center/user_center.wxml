@@ -1,0 +1,5 @@
+<!--pages/user_center/user_center.wxml-->
+<view class="user_center">
+  <navigator class='item' url="/pages/goods-details/index" hover-class="navigator-hover">主入口</navigator>
+  <navigator class='item' url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">系统设置</navigator>
+</view>

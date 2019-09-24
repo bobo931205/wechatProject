@@ -1,0 +1,33 @@
+<!--pages/main/main.wxml-->
+<view class="container">
+   <view class="swiper-container">
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{banners}}">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+   </view>
+    
+    <view class="type-container">
+        <scroll-view class="type-navbar" scroll-x="true" style="width: 100%">
+            <view class="type-box" wx:for-items="{{menuCategorys}}">
+                <view id="{{item.categoryId}}" class="type-navbar-item {{activeCategoryId == item.categoryId ? 'type-item-on' : ''}}" bindtap="tabClick">
+                    {{item.categoryName}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+
+<view class="goods-container">
+    <view class="goods-box" wx:for-items="{{menuItems}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+        <view class="img-box">
+          <image src="{{item.imagesUrl}}" class="image"/>
+        </view>
+        <view class="goods-title">{{item.name}}</view>
+        <view class="goods-price">¥ {{item.price}}</view>
+    </view>
+</view>
+</view>
